@@ -17,8 +17,26 @@ class EventsController < ApplicationController
   end
 
   def create
-    @title = params[:event_title]
- 
+    @start_date = DateTime.parse(params[:start_date])
+    @duration = params[:duration].to_i
+    @title = params[:title]
+    @description = params[:description]
+    @price = params[:price].to_i
+    @location = params[:location]
+
+    @event = Event.new(start_date:@start_date, duration:@duration, title:@title, description:@description, price:@price, location:@location, admin:current_user)
+    puts "$"*60
+    puts @start_date
+    puts "$"*60
+
+    if @event.save 
+      redirect_to "/"
+  
+  else
+    @event.errors.full_messages.each{|e|puts e}
+    render :action => :new
+    
+  end
     
   end
 end

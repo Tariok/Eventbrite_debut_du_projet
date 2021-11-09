@@ -16,15 +16,14 @@ User.create(
 
 end
 
-
 10.times do
   Event.create(
-  start_date:Faker::Date.forward(days: 23),
+  start_date:Faker::Time.forward(days: 5,  period: :evening, format: :long),
   duration:Faker::Number.between(from:5,to:5),
   title:Faker::Kpop.ii_groups,
   description:Faker::Lorem.paragraph,
   price: Faker::Number.between(from: 1, to: 1000),
-  location:Faker::House.room,
+  location:"Poitiers",
   admin_id:User.all.sample.id
   )
 end
