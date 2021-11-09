@@ -43,6 +43,10 @@
             <li class="nav-item">
               <a class="nav-link" <%= link_to "Déconnexion", destroy_user_session_path, method: :delete %></a>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link" <%= link_to "Edit email / password", edit_user_registration_path %></a>
+            </li>
           
           <% else%>
 
