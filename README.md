@@ -1,6 +1,6 @@
 # README
 
-https://dashboard.heroku.com/apps/secure-stream-27311
+https://secure-stream-27311.herokuapp.com/
 
 
 This README would normally document whatever steps are necessary to get the
