@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    
+    </head>
+  <style>
+    textarea {
+    padding: 10px;
+    max-width: 50%;
+    line-height: 1.5;
+    border-radius: 10px;
+    border: 1px solid red;
+    box-shadow: 1px 1px 1px #999;
+
+    }
+  </style>
+  
+  
+  <body> 
+ 
+  <h1>Voici l'événement crée </h1>
+
+
+    <div class="card " style="width: 18rem;">
+      <div class="card-body ">
+      <h5 class="card-title"><%=@event_title%></h5>
+      <h6 class="card-subtitle mb-2 text-muted">Crée par: <%=@event_author%></h6>
+      <h6 class="card-subtitle mb-2 text-muted">Prévu pour le  <%=@event_start_day%> </h6>
+      <h6 class="card-subtitle mb-2 text-muted">D'une durée de: <%=@event_duration%> minutes</h6>
+      <h6 class="card-subtitle mb-2 text-muted">D'un prix de: <%=@event_duration%> €</h6>
+      <h6 class="card-subtitle mb-2 text-muted">Et d'une location de <%=@event_location%> :)</h6>
+
+      <a href="/user/<%=@event_author%>"> Voir le profil de l'auteur </a>
+
+      <p class="card-text"><%=@event_content%></p>
+     
+     
+    </div>
+    </div>
+      
+
+  </body>
+</html>
